@@ -1,0 +1,321 @@
+button {
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
+.btn-style-none {
+  background: transparent;
+  box-shadow: none;
+  border:none;
+  text-decoration: none;
+  border-radius: 0;
+  padding: 0; margin: 0;
+  &:hover, &:focus, &:active {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  &:hover, &:focus, &:active { text-decoration: none; }
+
+  &.article-card {
+    &:hover {
+      .text-link {
+        color: $mid-grey;
+
+        &:after {
+          background: $navy;
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+.btn-has-spinner {
+  position: relative;
+
+  .spinner {
+    font-size: 2px;
+  }
+  .spinner-container {
+    opacity: 0; visibility: hidden;
+    @include translate(center);
+  }
+  .text, .spinner-container {
+    transition: opacity $speed, visibility $speed;
+  }
+  &.loading {
+    .text { opacity: 0; visibility: hidden; }
+    .spinner-container {
+      opacity: 1; visibility: visible;
+    }
+  }
+}
+
+.primary-btn,
+.secondary-btn,
+.tertiary-btn,
+.more-btn {
+  @extend .font-bold;
+  font-size: 13px;
+  letter-spacing: em(0.25px, 13px);
+  line-height: em(14px, 12px);
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 24px;
+  text-align: center;
+  height: auto;
+  min-width: 174px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $border-radius;
+  position: relative;
+  transition: background $speed, color $speed, border $speed, letter-spacing $speed;
+  cursor: pointer;
+  &.full {
+    width: 100%;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include media(sm-desktop) {
+    min-width: 175px;
+  }
+}
+
+.primary-btn {
+  color: $dark-navy;
+  border: 1px solid $red;
+  background-color: $red;
+  &:hover {
+    background-color: $navy;
+    color: $white;
+    border-color: $navy;
+  }
+  &:focus {
+    color: $white;
+    border: 1px solid $red;
+    background-color: $red;
+  }
+
+  &.alt {
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $navy;
+    }
+  }
+
+  &.primary-alt {
+    &:hover {
+      background-color: rgba($navy, 0.6);
+      color: $white;
+    }
+  }
+}
+
+.secondary-btn {
+  color: $red;
+  border: 1px solid $red;
+  background-color: $white;
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
+  &:focus {
+    color: $white;
+    border: 1px solid $red;
+    background-color: $red;
+  }
+
+  &.secondary-alt {
+    &:hover {
+      background-color: rgba($navy, 0.6);
+      color: $white;
+      border: 1px solid $navy;
+    }
+  }
+  &.white-border{
+    border: 1px solid $light-grey;
+  }
+  &.icon-link {
+    .icon {
+      color: $navy;
+    }
+    &:hover {
+      .icon {
+        color: $white;
+      }
+    }
+  }
+}
+
+.tertiary-btn {
+  color: $navy;
+  border: 1px solid $navy;
+  background-color: $light-grey;
+  &:hover {
+    color: $navy;
+    background-color: $white;
+  }
+  &:focus {
+    border: 1px solid $light-navy;
+    background-color: $light-grey;
+  }
+}
+
+.more-btn {
+  border: 1px solid $light-navy;
+  color: $navy;
+  background-color: transparent;
+  &:hover {
+    color: $navy;
+    border-color: $navy;
+    background-color: transparent;
+  }
+}
+
+.text-link {
+  @extend .font-bold;
+  text-transform: none;
+  font-size: 13px;
+  letter-spacing: normal;
+  position: relative;
+  color: $red;
+  transition: all $speed;
+  display: inline-block;
+
+  &, &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(6px, 0px);
+    width: 15px; height: 1px;
+    background-color: $red;
+    transition: all $speed;
+  }
+
+  &:hover {
+    color: $red;
+    &:after {
+      background: $red;
+      width: 30px;
+    }
+  }
+
+  &.white {
+    color: $white;
+
+    &:after {
+      background-color: $white;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+  &.icon-link {
+    .icon {
+      height: 13px;
+      width: 13px;
+      margin-right: 4px;
+    }
+    &:after {
+      display: none;
+    }
+    &:hover {
+      color: $navy;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+}
+
+span.text-link {
+  padding-left: 6px;
+}
+
+.mobile-cta-btn {
+  @extend .font-regular;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $navy;
+  border-top: 0.5px solid $white;
+  border-left: 0.5px solid $white;
+  font-size: 10px;
+  letter-spacing: em(1px, 10px);
+  font-weight: normal;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+a.secondary-nav-link {
+  font-size: 18px;
+  line-height: em(25px, 18px);
+  color: $mid-grey;
+  padding: 8px;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: $navy;
+    position: absolute;
+    left: 10px;
+    bottom: -8px;
+    transition: all .2s ease-in-out;
+  }
+
+  &.active {
+    color: $navy;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $navy;
+
+    &:after {
+      content: "";
+      width: 15px;
+      height: 1px;
+      background-color: $navy;
+    }
+  }
+
+  @include media(sm-desktop) {
+    font-size: 15px;
+    line-height: em(20px, 15px);
+  }
+}
+
+.btn-icon {
+  padding-right: 10px;
+
+  .icon {
+    height: 12px;
+    width: 12px;
+    transition: all $speed-fast ease-in-out;
+  }
+}

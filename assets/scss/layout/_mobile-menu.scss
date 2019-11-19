@@ -1,0 +1,89 @@
+#mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: block;
+  top: $header-height-md;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  display: none;
+  .menu-wrapper {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    position: relative;
+    #mobile-stacker-nav-menu {
+      padding-bottom: 60px;
+      height: 100%;
+      position: relative;
+    }
+    .nav-menu {
+      display: block;
+      margin-bottom: 30px;
+      a {
+        width: 100%;
+        padding: 10px 80px 10px;
+        position: relative;
+        font-size: 18px;
+      }
+      &.secondary-nav {
+        a {
+          @extend .font-regular;
+        }
+      }
+    }
+    .language-mobile {
+      display: flex;
+      padding: 10px 80px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      a {
+        padding-right: 20px;
+        font-size: 18px;
+        color: $navy;
+        text-decoration: none;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .nav-menu {
+        a {
+          padding: 10px 40px 10px;
+        }
+      }
+      .language-mobile {
+        padding: 10px 40px;
+      }
+    }
+  }
+}
+#trigger-mobile-menu {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  color: $navy;
+  z-index: 100;
+  display: none;
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+body.dropdown-open {
+  #main-header { background: $white; }
+  #mobile-menu {
+    display: block;
+    
+  }
+  
+}

@@ -1,0 +1,36 @@
+
+// ===== Bootstrap
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 620px,
+  md: 800px,
+  lg: 1200px,
+  xl: 1500px
+);
+
+$link-color: #ec088d;
+$link-color-hover: #ec088d;
+$link-text-decoration: underline;
+$link-text-decoration-hover: none;
+
+// Only include what we need from Bootstrap (see file "node_modules/bootstrap/scss/bootstrap" for full list of components)
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+
+// ===== Liquid
+@import 'main';

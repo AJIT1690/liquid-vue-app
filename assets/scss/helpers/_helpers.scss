@@ -1,0 +1,240 @@
+// Side Padding
+.wrapper-pl {
+  padding-left: $wrapper-padding;
+  @include media-breakpoint-down(lg) { padding-left: $padding-lg; }
+  @include media-breakpoint-down(md) { padding-left: $padding-md; }
+  @include media-breakpoint-down(sm) { padding-left: $padding-sm; }
+}
+.wrapper-pr {
+  padding-right: $wrapper-padding;
+  @include media-breakpoint-down(lg) { padding-right: $padding-lg; }
+  @include media-breakpoint-down(md) { padding-right: $padding-md; }
+  @include media-breakpoint-down(sm) { padding-right: $padding-sm; }
+} 
+
+.wrapper-padding {
+  @extend .wrapper-pl;
+  @extend .wrapper-pr;
+}
+
+.wrapper-ml {
+  margin-left: $wrapper-padding;
+  @include media-breakpoint-down(lg) { margin-left: $padding-lg; }
+  @include media-breakpoint-down(md) { margin-left: $padding-md; }
+  @include media-breakpoint-down(sm) { margin-left: $padding-sm; }
+}
+.wrapper-mr {
+  margin-right: $wrapper-padding;
+  @include media-breakpoint-down(lg) { margin-right: $padding-lg; }
+  @include media-breakpoint-down(md) { margin-right: $padding-md; }
+  @include media-breakpoint-down(sm) { margin-right: $padding-sm; }
+}
+
+.wrapper-margin {
+  @extend .wrapper-ml;
+  @extend .wrapper-mr;
+}
+
+
+// Section Spacing
+
+.section-pt {
+  padding-top: $spacing;
+  @include media(desktop) { padding-top: $spacing-xl; }
+  @include media-breakpoint-down(lg) { padding-top: $spacing-lg; }
+  @include media-breakpoint-down(md) { padding-top: $spacing-md; }
+  @include media-breakpoint-down(sm) { padding-top: $spacing-sm; }
+}
+.section-pb {
+  padding-bottom: $spacing;
+  @include media(desktop) { padding-bottom: $spacing-xl; }
+  @include media-breakpoint-down(lg) { padding-bottom: $spacing-lg; }
+  @include media-breakpoint-down(md) { padding-bottom: $spacing-md; }
+  @include media-breakpoint-down(sm) { padding-bottom: $spacing-sm; }
+}
+.section-mt {
+  margin-top: $spacing;
+  @include media(desktop) { margin-top: $spacing-xl; }
+  @include media-breakpoint-down(lg) { margin-top: $spacing-lg; }
+  @include media-breakpoint-down(md) { margin-top: $spacing-md; }
+  @include media-breakpoint-down(sm) { margin-top: $spacing-sm; }
+}
+.section-mb {
+  margin-bottom: $spacing;
+  @include media(desktop) { margin-bottom: $spacing-xl; }
+  @include media-breakpoint-down(lg) { margin-bottom: $spacing-lg; }
+  @include media-breakpoint-down(md) { margin-bottom: $spacing-md; }
+  @include media-breakpoint-down(sm) { margin-bottom: $spacing-sm; }
+}
+
+// ==== content wrapping
+
+.main-text {
+  max-width: 400px;
+  @include media(sm-desktop) {
+    max-width: 380px;
+  }
+}
+
+// ==== Mobile margin ==== //
+.spacer-mobile {
+  @include media-breakpoint-down(md) {
+    height: 30px;
+  }
+}
+
+// ==== Negative Margins ==== //
+.nmr {
+  margin-right: calc((100vw - #{$wrapper-width}) / -2);
+  @media only screen and (max-width: $container-width) {
+    margin-right: -$wrapper-padding;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-right: calc((100vw - #{$wrapper-width-lg}) / -2);
+  }
+  @media only screen and (max-width: $container-width-lg) {
+    margin-right: -$padding-lg;
+  }
+  @include media-breakpoint-down(md) {
+    margin-right: -$padding-md;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-right: -$padding-sm;
+  }
+}
+
+.nml {
+  margin-left: calc((100vw - #{$wrapper-width}) / -2);
+  @media only screen and (max-width: $container-width) {
+    margin-left: -$wrapper-padding;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-left: calc((100vw - #{$wrapper-width-lg}) / -2);
+  }
+  @media only screen and (max-width: $container-width-lg) {
+    margin-left: -$padding-lg;
+  }
+  @include media-breakpoint-down(md) {
+    margin-left: -$padding-md;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-left: -$padding-sm;
+  }
+}
+
+.nmr-inside-padding {
+  padding-right: $negative-margin;
+  @include media(desktop) {
+    padding-right: $negative-margin-desktop;
+  }
+  @include media(sm-desktop) {
+    padding-right: $negative-margin-sm-desktop;
+  }
+  // @include media(wrapper-width) {
+  //   padding-right: $wrapper-padding;
+  // }
+  @include media-breakpoint-down(lg) {
+    padding-right: $negative-margin-lg;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-right: $padding-sm;
+  }
+}
+
+.nml-inside-padding {
+  padding-left: $negative-margin;
+  @include media(desktop) {
+    padding-left: $negative-margin-desktop;
+  }
+  @include media(sm-desktop) {
+    padding-left: $negative-margin-sm-desktop;
+  }
+  // @include media(wrapper-width) {
+  //   margin-right: $wrapper-padding;
+  // }
+  @include media-breakpoint-down(lg) {
+    padding-left: $negative-margin-lg;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: $padding-sm;
+  }
+}
+
+// ==== Helper paddings and margins that are commonly used ==== //
+.mb-wrapper { margin-bottom: $wrapper-padding; }
+.mb0 { margin-bottom: 0px; }
+.mb15 { margin-bottom: 15px; }
+.mb20 { margin-bottom: 20px; }
+.mb30 { margin-bottom: 30px; }
+.mb40 { margin-bottom: 40px; }
+.mb50 { margin-bottom: 50px; }
+.mb60 { margin-bottom: 60px; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mt30 { margin-top: 30px; }
+.mt40 { margin-top: 40px; }
+.mt50 { margin-top: 50px; }
+.mt60 { margin-top: 60px; }
+.mr20 { margin-right: 20px; }
+
+.relative {
+  position: relative;
+}
+
+.nmb8 { margin-bottom: -8px; }
+.nmt8 { margin-top: -8px; }
+
+.nmb30 { margin-bottom: -30px; }
+
+.pb50 { padding-bottom: 50px; }
+
+@include media-breakpoint-down(md) {
+  .mb-md30-sm20 {
+    margin-bottom: 30px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .mb-md30-sm20 {
+    margin-bottom: 20px;
+  }
+
+  .mb-wrapper {
+    margin-bottom: 70px;
+  }
+}
+
+// More gaps in coloumns
+
+.row-wrapper {
+  .row {
+    margin: 0 -25px;
+    .col-xl, .col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg, .col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md, .col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm, .col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col, .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+      padding: 0 25px;
+    }
+  }
+  @include media(xs-desktop) {
+    .row {
+      margin: 0 -15px;
+      .col-xl, .col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg, .col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md, .col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm, .col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col, .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+        padding: 0 15px;
+      }
+    }
+  } 
+}
+
+
+.title-with-bth {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  .title {
+    max-width: 50%;
+  }
+  @include media-breakpoint-down(sm) {
+    display: block;
+    .title {
+      max-width: 100%;
+    }
+  }
+}

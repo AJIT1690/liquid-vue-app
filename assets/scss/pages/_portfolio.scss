@@ -1,0 +1,6 @@
+.media-box {
+	padding: 85px 6%;
+	@include media-breakpoint-down(sm) {
+		padding: 40px 6%;
+	}
+}

@@ -1,0 +1,133 @@
+// === COLOURS
+
+$white: #ffffff;
+$black: #000000;
+
+$dark-grey: rgba(221, 221, 221, 0.25);
+$dark-mid-grey:#dddddd;
+$grey: #666666;
+$mid-grey: #75767a;
+$light-grey: #f9f9f9;
+
+$navy: #013951;
+$light-navy: #013a51;
+$dark-navy: #08245b;
+
+
+$red: #fe6f5e;
+
+
+// === GENERAL
+
+$speed: .4s;
+$speed-fast: .2s;
+$border-radius: 2px;
+$overlay: rgba(10,10,10,0.2);
+$overlay-darker: rgba(10,10,10,0.4);
+$header-shadow: -2px 0 20px 2px rgba(102, 102, 102, 0.2);
+
+
+
+// === LAYOUT (wrapper, spacing)
+
+$wrapper-width: 1570px;
+$wrapper-width-lg: 1200px;
+$wrapper-padding: 100px;
+$padding-lg: 80px;
+$padding-md: 80px;
+$padding-sm: 40px;
+
+$container-width: #{$wrapper-width + ($wrapper-padding * 2)};
+$container-width-lg: #{$wrapper-width-lg + ($padding-lg * 2)};
+
+$spacing: 90px;
+$spacing-xl: 70px;
+$spacing-lg: 45px;
+$spacing-md: 45px;
+$spacing-sm: 45px;
+$spacing-xs: 30px;
+
+$negative-margin: 495px;
+$negative-margin-desktop: 180px;
+$negative-margin-sm-desktop: 120px;
+$negative-margin-lg: 180px;
+
+
+// === HEADER
+
+$header-height: 106px;
+$header-height-min: 106px;
+$header-height-lg: 106px;
+$header-height-min-lg: 90px;
+$header-height-md: 65px;
+$header-height-sm: 65px;
+
+
+
+
+// ==== FORMS
+$input-height: 40px;
+$input-height-mobile: 32px;
+$form-placeholder: $dark-navy;
+// $form-color: $copy-color;
+$form-error: red;
+
+$form-border: rgba(8, 36, 91, .3);
+// $form-border: $grey;
+// $form-border-light: $light-grey;
+
+
+
+
+// === FONTS
+
+
+// GT-Walsheim: font face
+
+@include font-face('GT-Walsheim-Light', 'gt-walsheim/GT-Walsheim-Light');
+@include font-face('GT-Walsheim-Medium', 'gt-walsheim/GT-Walsheim-Medium');
+@include font-face('GT-Walsheim-Regular', 'gt-walsheim/GT-Walsheim-Regular');
+
+.font-alt-light {
+  font-family: 'GT-Walsheim-Light';
+  font-weight: normal;
+}
+.font-alt-regular {
+  font-family: 'GT-Walsheim-Regular';
+  font-weight: normal;
+}
+.font-alt-italic {
+  font-style: italic;
+}
+.font-alt-medium {
+  font-family: 'GT-Walsheim-Medium';
+  font-weight: normal;
+}
+
+// Proxima-nova: font face
+@include font-face('Proxima Nova Light', 'proximo-nova/Proxima Nova Light');
+@include font-face('Proxima Nova Bold', 'proximo-nova/Proxima Nova Bold');
+@include font-face('Proxima Nova Reg', 'proximo-nova/Proxima Nova Reg');
+@include font-face('ProximaNova-Semibold', 'proximo-nova/ProximaNova-Semibold');
+@include font-face('ProximaNova-Medium', 'proximo-nova/ProximaNova-Medium');
+
+.font-light {
+  font-family: 'Proxima Nova Light';
+  font-weight: normal;
+}
+.font-regular {
+  font-family: 'Proxima Nova Reg';
+  font-weight: normal;
+}
+.font-medium {
+  font-family: 'ProximaNova-Semibold';
+  font-weight: normal;
+}
+.font-semibold {
+  font-family: 'ProximaNova-Semibold';
+  font-weight: normal;
+}
+.font-bold {
+  font-family: 'Proxima Nova Bold';
+  font-weight: normal;
+}

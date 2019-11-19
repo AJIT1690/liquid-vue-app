@@ -1,0 +1,70 @@
+// ==== Translate to center element
+// using right instead of left to avoid scroll on ie:
+// http://stackoverflow.com/questions/27990347/ie-showing-horizontal-scrollbar-after-dom-element-transformed
+// Usage: @include translate(center-y);
+@mixin translate($status) {
+  position: absolute;
+  @if $status == 'center' {
+    top: 50%; right: 50%;
+    -webkit-transform: translate(50%,-50%);
+    -ms-transform: translate(50%,-50%);
+    transform:translate(50%, -50%);
+  } @else if $status == 'center-y' {
+    top: 50%; right: auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform:translateY(-50%);
+  } @else if $status == 'center-x' {
+    right: 50%; top: auto;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform:translateX(50%);
+  } @else if $status == 'none' {
+    right: auto; top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform:none;
+    position: relative;
+  }
+}
+
+// === Position absolute/relative
+// Usage: @include position(full);
+@mixin position($status) {
+  @if $status == 'full' {
+    position: absolute;
+    top: 0;left: 0; right: 0; bottom: 0;
+  } @else if $status == 'auto' {
+    position: relative;
+    top: auto; left: auto; right: auto; bottom: auto;
+    transform: none;
+  }
+}
+
+// === Set responsive wrapper space (padding, margin, left/right, etc.)
+@mixin wrapper-space($property) {
+  #{$property}: $wrapper-padding;
+  @include media-breakpoint-down(lg) { #{$property}: $padding-lg; }
+  @include media-breakpoint-down(md) { #{$property}: $padding-md; }
+  @include media-breakpoint-down(sm) { #{$property}: $padding-sm; }
+}
+
+
+// === Convert px to em
+// line-height: em(24px, 16px);
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1em;
+}
+
+// font face mixin to easily add fonts
+// fonts are defined in heleprs/_variables.scss
+@mixin font-face($fontname,$filename) {
+  @font-face {
+  font-family: '#{$fontname}';
+  src: url('/fonts/#{$filename}.eot');
+  src: url('/fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
+    //  url('/fonts/#{$filename}.woff') format('woff'),
+     url('/fonts/#{$filename}.ttf') format('truetype'),
+     url('/fonts/#{$filename}.svg##{$filename}') format('svg');
+}}

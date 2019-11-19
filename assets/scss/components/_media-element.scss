@@ -1,0 +1,33 @@
+.media {
+	display: flex;
+	margin: 0;
+	.media-image {
+		width: 208px;
+		height: 208px;
+		background: $light-grey;
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		margin-right: 55px;
+		.img-wrapper {
+			max-width: 76px;
+			width: 76px;
+			margin: 0 auto;
+		}
+	}
+	.media-content {
+		.heading {
+			max-width: 350px;	
+		}
+	} 
+
+	
+	@include media-breakpoint-down(sm) {
+		display: block;
+		.media-content {
+			.heading {
+				margin: 0 0 30px;
+			}
+		}
+	}
+}

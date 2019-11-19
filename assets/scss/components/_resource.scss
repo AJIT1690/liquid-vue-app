@@ -1,0 +1,45 @@
+.resource-grid {
+	margin: 0 -15px;
+	display: block;
+	.resource-block {
+		width: calc(20% - 30px);
+		margin: 0 15px;
+		float: left;
+		border-radius: 5px;
+		box-shadow: 0 0 12px 0 rgba(227, 225, 216, 0.25);
+		border: 1px solid $dark-mid-grey;
+		background: $light-grey;
+		display: block;
+		margin-top: 10px;
+		text-decoration: none;
+		.resource-banner {
+			border-radius: 5px;
+			overflow: hidden;
+		}
+		.content {
+			padding: 10px 20px 20px;
+			.icon-wrapper {
+				display: flex;
+				margin-top: 5px;
+				justify-content: flex-end;
+				.icon {
+					height: 10px;
+					width: 10px;
+					margin-left: 12px;
+				}
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			width: calc(25% - 30px);
+		}
+		@include media-breakpoint-down(md) {
+			width: calc(33.33% - 30px);
+		}
+		@include media-breakpoint-down(sm) {
+			width: calc(50% - 30px);
+		}
+		@include media(mobile) {
+			width: calc(100% - 30px);
+		}
+	}
+}

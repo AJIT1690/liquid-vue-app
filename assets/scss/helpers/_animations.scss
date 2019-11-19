@@ -1,0 +1,21 @@
+.slide-in {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 1s, transform 1s;
+}
+
+.slided-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes slide-up-fade-in {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

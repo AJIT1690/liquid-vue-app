@@ -1,0 +1,27 @@
+.icon-card-grid {
+	margin: 40px 0;
+	.icon-box {
+		padding: 40px 40px 30px;
+		margin: 40px 0;
+		.icon-card {
+			width: 73px;
+			height: 75px;
+			padding: 20px;
+			margin-bottom: 30px;
+			margin-top: -78px;
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+			background: $light-grey;
+			.icon {
+				width: 30px;
+				height: 30px;
+				margin: 0 auto;
+				color: $red;
+			}
+		}
+		.text-link-container {
+			margin: 0;
+		}
+	}
+}

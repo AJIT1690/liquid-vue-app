@@ -1,0 +1,30 @@
+// == BOOTSTRAP 4 to be used as follows:
+// @include media-breakpoint-down(xs) { .. } // < 620px
+// @include media-breakpoint-down(sm) { .. } // < 800px
+// @include media-breakpoint-down(md) { .. } // < 1220px
+// @include media-breakpoint-down(lg) { .. } // < 1500px
+
+
+// == Additional breakpoints
+@mixin media($media) {
+  @if $media == desktop {
+    @media only screen and (max-width: 1920px) { @content; }
+  }
+  @else if $media == sm-desktop {
+    @media only screen and (max-width: 1800px) { @content; }
+  }
+  @else if $media == xs-desktop {
+    @media only screen and (max-width: 1280px) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $media == sm-mobile {
+    @media only screen and (max-width: 320px) { @content; }
+  }
+}
+// @include media(desktop) { .. } // <= 1920px
+// @include media(sm-desktop) { .. } // <= 1800px
+// @include media(xs-desktop) { .. } // <= 1280px
+// @include media(mobile) { .. } // <= 480px
+// @include media(sm-mobile) { .. } // <= 320px

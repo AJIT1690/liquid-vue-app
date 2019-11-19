@@ -1,0 +1,230 @@
+
+// === Form placeholder
+.form-control {
+  &::-webkit-input-placeholder{ color: $form-placeholder; opacity: 1;}
+  &:-ms-input-placeholder{ color: $form-placeholder; opacity: 1;}
+  &:-moz-placeholder{ color: $form-placeholder; opacity: 1;}
+  &::-moz-placeholder{ color: $form-placeholder; opacity: 1;}
+}
+
+
+// === Form General
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  &.mb0 { margin-bottom: 0; }
+  // @include media-breakpoint-down(lg) {
+  //   margin-bottom: 40px;
+  // }
+  // @include media-breakpoint-down(md) {
+  //   margin-bottom: 30px;
+  // }
+}
+
+.form-control {
+  @extend .font-regular;
+  font-size: 16px;
+  line-height: em(20px, 16px);
+  letter-spacing: em(0.29px, 16px);
+  color: $light-navy;
+  padding: 0;
+  padding-bottom: 5px;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 0;
+  margin-bottom: 0;
+  position: relative;
+  border-bottom: 1px solid $form-border;
+  transition: all $speed;
+  opacity: .7;
+  &.no-border { 
+    border-bottom: none; 
+    &:hover {
+      border-bottom: none;
+    }
+    &:focus {
+      border-bottom: none;
+    }
+    &:active {
+      border-bottom: none;
+    }
+  }
+  &:hover, &:focus {
+    outline: none;
+    opacity: 1;
+    box-shadow: none;
+    color: $light-navy;
+    background: transparent;
+    border-bottom: 1px solid $dark-navy;;
+  }
+  &:active {
+    opacity: .7;
+    border-bottom: 1px solid $form-border;
+  }
+  &:placeholder-shown {
+    border-color: $form-border;
+  }
+  &:focus {
+    opacity: 1;
+    border-color: $dark-navy;
+  }
+  &.error {
+    border-bottom: 1px solid $red;
+  }
+  // @include media-breakpoint-down(md) {
+  //   font-size: 16px;
+  // }
+}
+
+.form-control {
+  height: auto;
+  // @include media-breakpoint-down(md) {
+  //   height: $input-height-mobile
+  // }
+}
+textarea.form-control {
+  min-height: 102px;
+  @include media-breakpoint-down(sm) { 
+    min-height: 60px;
+  }
+}
+.select-cover {
+  position: relative;
+  z-index: 10;
+  select.form-control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 25px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    height: 8px;
+    width: 8px;
+    border-right: 2px solid $grey;
+    border-bottom: 2px solid $grey;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+}
+
+label {
+  @extend .font-semibold;
+  color: $light-navy;
+  font-size: 13px;
+  line-height: em(16px, 13px);
+  letter-spacing: em(0.25px, 13px);
+  margin-bottom: 5px;
+  // @include media-breakpoint-down(md) {
+  //   font-size: 12px;
+  // }
+}
+
+
+// ==== Checkbox Group: align label to the right of checkbox
+.form-group.checkbox-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; // left
+  // align-items: baseline;
+  border-bottom: none;
+  position: relative;
+  margin-bottom: 30px;
+  label {
+    color: $light-navy;
+    font-size: 12px;
+    line-height: em(16px, 12px);
+    letter-spacing: em(0.25px, 12px);
+    text-transform: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding-left: 10px;
+    transition: color $speed;
+  }
+  input {
+    margin-top: 1px;
+    flex: 0 0 auto;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+  // @include media-breakpoint-down(md) {
+  //   label { font-size: 14px; }
+  // }
+}
+// ==== Custom checkbox
+input[type="checkbox"].styled {
+  cursor: pointer;
+  box-shadow: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: $white;
+  display: inline-block;
+  line-height: 1em;
+  padding: 0;
+  vertical-align: text-top;
+  border-radius: 0px;
+  width: 12px;
+  height: 12px;
+  outline: none;
+  position: relative;
+  margin: 0;
+  margin-top: 2px;
+  border: 1px solid $light-navy;
+  &:after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 8px;
+    border: solid $light-navy;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    color: $light-navy;
+  }
+
+  &:not(:checked):after {
+    opacity: 0;
+  }
+
+  &:focus {
+    background-color: $white;
+  }
+
+  &:checked {
+    background-color: $white;
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  // @include media-breakpoint-down(md) {
+  //   width: 14px;
+  //   height: 14px;
+  //   &:after {
+  //     width: 4px;
+  //     height: 9px;
+  //   }
+  // }
+}
+// ==== End Custom checkbox
+

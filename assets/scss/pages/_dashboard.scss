@@ -1,0 +1,7 @@
+.grid-wrapper {
+	height: 100%;
+	display: flex;
+	@include media-breakpoint-down(md) {
+		height: auto;
+	}
+}

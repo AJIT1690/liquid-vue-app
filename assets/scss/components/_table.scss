@@ -1,0 +1,44 @@
+.table {
+	width: 100%;
+	margin: 0;
+	table {
+		width: 100%;
+		tr{
+			td {
+				border-top: 1px solid rgba(221, 221, 221, 0.5);
+				padding: 20px 0 11px;
+				p,h4 {
+					margin: 0;
+				}
+				h4 {
+					font-size: 18px;
+					text-transform: none;
+				}
+				&:first-child {
+					padding-right: 15px;
+				}
+			}
+			&:first-child {
+				td {
+					border: none;
+				}
+			}
+		}	
+	}
+	@include media-breakpoint-down(sm) {
+		table {
+			tr {
+				td {
+					display: block;
+					h4 {
+						font-size: 16px;
+					}
+					&:nth-child(2) {
+						border: none;
+					}
+				}
+				
+			}
+		}
+	}
+}

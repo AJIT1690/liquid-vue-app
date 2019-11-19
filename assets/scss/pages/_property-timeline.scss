@@ -1,0 +1,18 @@
+.time-line-section-1 {
+	margin-top: 60px;
+	
+	.gallery-slider {
+		padding-right: 30px;
+		@include media-breakpoint-down(sm) {
+			padding-right: 0px;
+		}
+	}
+}
+.time-line-section-2 {
+	.update-slider-section {
+		.update-slide-items {
+			max-width: 344px;
+		}
+	}
+
+}
