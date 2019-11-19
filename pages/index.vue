@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-12 col-lg-10">
         <intro-content :pageTitle="pageTitle" :leadText="leadText"></intro-content>
-        <project-card :name="name" :project="project" :projectAddress="projectAddress" :linkText="linkText" ></project-card>
+        <project-card  :project="project" :projectAddress="projectAddress" :linkText="linkText" ></project-card>
         <project-card :name="name2" :project="project2" :projectAddress="projectAddress2" :linkText="linkText" ></project-card>
         <media-box></media-box>
       </div>

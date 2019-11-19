@@ -5,7 +5,7 @@
 			<li id="mobile-sidepanel-header">
 				<a href="#">
 					<div class="icon-wrapper">
-						<svg class="icon"><use xlink:href="assets/svg/icon.svg#phone"></use></svg>
+						<svg class="icon"><use xlink:href="~/assets/svg/icon.svg#phone"></use></svg>
 					</div>
 					<div class="label-wrapper">
 						<p>My investment journey</p>
@@ -101,4 +101,18 @@
 export default {
     
 }
+// $(document).ready(function () {
+//   $('#mobile-sidepanel-header').click(function () {
+//     $('body').toggleClass('sidepanel-open');
+//   });
+// });
+
+// $(document).ready(function () {
+//   $('#trigger-mobile-menu').click(function () {
+//     $(this).text(function (i, text) {
+//       return text === "Menu" ? "Close" : "Menu";
+//     });
+//     $('body').toggleClass('dropdown-open');
+//   });
+// }); 
 </script>

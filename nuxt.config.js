@@ -24,7 +24,7 @@ export default {
   */
   css: [
     // Load a Node.js module directly (here it's a Sass file)
-    'bulma',
+    
     // SCSS file in the project
     '@/assets/scss/style.scss'
   ],
@@ -43,8 +43,8 @@ export default {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/bulma'
+    
+    
   ],
   /*
   ** Build configuration

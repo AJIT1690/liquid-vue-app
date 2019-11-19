@@ -62,9 +62,9 @@ $browser-context: 16;
 @mixin font-face($fontname,$filename) {
   @font-face {
   font-family: '#{$fontname}';
-  src: url('/fonts/#{$filename}.eot');
-  src: url('/fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
+  src: url('~assets/fonts/#{$filename}.eot');
+  src: url('~assets/fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
     //  url('/fonts/#{$filename}.woff') format('woff'),
-     url('/fonts/#{$filename}.ttf') format('truetype'),
-     url('/fonts/#{$filename}.svg##{$filename}') format('svg');
+     url('~assets/fonts/#{$filename}.ttf') format('truetype'),
+     url('~assets/fonts/#{$filename}.svg##{$filename}') format('svg');
 }}

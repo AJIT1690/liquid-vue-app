@@ -4,7 +4,7 @@
 			<div class="top-footer">
 				<div class="logo-box">
 					<a href="#" class="logo logo-full" aria-label="Liquid Digital Agency">
-		             	<img src="assets/svg/pp-logo-full-white.svg" alt="logo">
+		             	<img src="~/assets/svg/pp-logo-full-white.svg" alt="logo">
 		            </a>
 				</div>
 				<div class="link-box">

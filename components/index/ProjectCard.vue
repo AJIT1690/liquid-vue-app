@@ -2,7 +2,7 @@
     <div class="project-card">
        <nuxt-link to="/Project">
             <div class="card-content">
-                <h2>{{name}}</h2>
+                <h2 v-if='name'>{{name}}</h2>
                 <p>{{project}}</p>
                 <p>{{projectAddress}}</p>
                 <span class="text-link white">{{linkText}}</span>

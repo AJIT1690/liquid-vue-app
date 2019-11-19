@@ -1,6 +1,6 @@
 <template>
     <div>
-		<button id="trigger-mobile-menu" type="button" role="button" aria-label="Toggle Navigation" class="btn-style-none off">Menu</button>
+		<button v-on:click="triggerMenu" id="trigger-mobile-menu" type="button" role="button" aria-label="Toggle Navigation" class="btn-style-none off"> {{btnText}} </button>
     	<div id="mobile-menu">
     		<div class="menu-wrapper">
     			<nav id="mobile-stacker-nav-menu" class="main-nav stacker-nav">
@@ -31,6 +31,22 @@
 
 <script>
 export default {
+	data: function() {
+		return { 
+			btnText:  'Menu'
+		}
+	},
+	methods: {
+		triggerMenu: function() {
+			if(this.btnText == 'Menu') {
+				this.btnText = 'Close'
+			}else{
+				this.btnText = 'Menu'
+			}
+		}
+	}
     
 }
 </script>
+
+
