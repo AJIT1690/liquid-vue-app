@@ -15,7 +15,7 @@
 					<div class="language">
 						<a href="#">En</a>
 						<a href="#">简体</a>
-						<a href="#">繁體</a>
+						<a href="#">繁體</a> 
 					</div>
 					<div class="dorpdown-item">
 						<a class="dropdown" href="">Welcome John <svg class="icon"><use xlink:href="/assets/svg/icon.svg#arrow_down"></use></svg></a>
@@ -31,7 +31,8 @@
 	        <logo></logo>
 	        <nav class="main-nav nav-menu">
 	            <ul class="list-style-none">
-	                <li><a href="dashboard.html" class="menu-item">Dashboard</a></li>
+					<li><nuxt-link to="/dashboard">Dashboard</nuxt-link></li>
+					
 	                <li><a href="investment-growth.html" class="menu-item">My deposit growth</a></li>
 	                <li><a href="property-timeline.html" class="menu-item">My property timeline</a></li>
 	                <li><a href="documents.html" class="menu-item">My documents</a></li>
