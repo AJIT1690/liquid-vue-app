@@ -20,18 +20,18 @@
 						<div class="icon-block">
 							<h6>WeChat</h6>
 							<div class="social-links">
-								<a href="#" target="_blank" aria-label="wechat"><svg class="icon"><use xlink:href="/assets/svg/icon.svg#wechat"></use></svg></a>
+								<a href="#" target="_blank" aria-label="wechat"><svg class="icon"><use xlink:href="~/assets/svg/icon.svg#wechat"></use></svg></a>
 							</div>
 						</div>
 						<div class="icon-block">
 							<h6>Follow</h6>
 							<div class="social-links">
-								<a href="#" target="_blank" aria-label="facebook"><svg class="icon"><use xlink:href="/assets/svg/icon.svg#facebook"></use></svg></a>
-								<a href="#" target="_blank" aria-label="instagram"><svg class="icon"><use xlink:href="/assets/svg/icon.svg#instagram"></use></svg></a>
-								<a href="#" target="_blank" aria-label="twitter"><svg class="icon"><use xlink:href="/assets/svg/icon.svg#twitter"></use></svg></a>
-								<a href="#" target="_blank" aria-label="linkedin"><svg class="icon"><use xlink:href="/assets/svg/icon.svg#linkedin"></use></svg></a>
-								<a href="#" target="_blank" aria-label="pinterest"><svg class="icon"><use xlink:href="/assets/svg/icon.svg#pinterest"></use></svg></a>
-								<a href="#" target="_blank" aria-label="youtube"><svg class="icon"><use xlink:href="/assets/svg/icon.svg#youtube"></use></svg></a>
+								<a href="#" target="_blank" aria-label="facebook"><svg class="icon"><use xlink:href="~/assets/svg/icon.svg#facebook"></use></svg></a>
+								<a href="#" target="_blank" aria-label="instagram"><svg class="icon"><use xlink:href="~/assets/svg/icon.svg#instagram"></use></svg></a>
+								<a href="#" target="_blank" aria-label="twitter"><svg class="icon"><use xlink:href="~/assets/svg/icon.svg#twitter"></use></svg></a>
+								<a href="#" target="_blank" aria-label="linkedin"><svg class="icon"><use xlink:href="~/assets/svg/icon.svg#linkedin"></use></svg></a>
+								<a href="#" target="_blank" aria-label="pinterest"><svg class="icon"><use xlink:href="~/assets/svg/icon.svg#pinterest"></use></svg></a>
+								<a href="#" target="_blank" aria-label="youtube"><svg class="icon"><use xlink:href="~/assets/svg/icon.svg#youtube"></use></svg></a>
 							</div>
 						</div>
 					</div>

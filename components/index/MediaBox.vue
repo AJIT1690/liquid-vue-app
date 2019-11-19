@@ -3,7 +3,7 @@
         <div class="media">
             <div class="media-image">
                 <div class="img-wrapper">
-                    <img src="/assets/svg/portfolio-media.svg" alt="logo">
+                    <img src="~/assets/svg/portfolio-media.svg" alt="logo">
                 </div>
             </div>
             <div class="spacer-mobile"></div>

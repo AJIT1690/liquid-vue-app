@@ -40,9 +40,12 @@ export default {
 		triggerMenu: function() {
 			if(this.btnText == 'Menu') {
 				this.btnText = 'Close'
+				this.$emit('openMenu', true);
 			}else{
 				this.btnText = 'Menu'
+				this.$emit('openMenu', false);
 			}
+			
 		}
 	}
     

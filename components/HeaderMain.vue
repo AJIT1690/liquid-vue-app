@@ -34,7 +34,7 @@
 	        </nav>
 	    </div>
 	</header>
-	<header-mobile></header-mobile>
+	<header-mobile v-on:openMenu="openMenu"></header-mobile>
     </div>
 </template>
 
@@ -47,6 +47,11 @@ export default {
 		HeaderMobile,
 		Logo,
 		MainNav
+	},
+	methods: {
+		openMenu: function(isOpen) {
+			this.$emit('openMenu', isOpen);
+		}
 	}
 }
 </script>

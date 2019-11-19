@@ -4,8 +4,8 @@
     <div class="row">
       <div class="col-md-12 col-lg-10">
         <intro-content :pageTitle="pageTitle" :leadText="leadText"></intro-content>
-        <project-card  :project="project" :projectAddress="projectAddress" :linkText="linkText" ></project-card>
-        <project-card :name="name2" :project="project2" :projectAddress="projectAddress2" :linkText="linkText" ></project-card>
+        <project-card :name="name" :project="project" :projectAddress="projectAddress" :linkText="linkText" id="project-1"></project-card>
+        <project-card :name="name2" :project="project2" :projectAddress="projectAddress2" :linkText="linkText" id="project-2"></project-card>
         <media-box></media-box>
       </div>
     </div>
@@ -44,6 +44,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  #project-1 {
+    background-image: url('~assets/img/portfolio-card-1.jpg');
+  }
+  #project-2 {
+    background-image: url('~assets/img/portfolio-card-2.jpg');
+  }
 </style>
