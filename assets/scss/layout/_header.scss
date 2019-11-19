@@ -146,7 +146,7 @@
       &:focus {
         color: $red;
       }
-      &.active {
+      &.nuxt-link-exact-active {
         color: $red;
       }
     }
@@ -222,7 +222,7 @@
     &:hover {
       color: $red;
     }
-    &.active{
+    &.nuxt-link-exact-active{
       @extend .font-bold;
       color: $red;
     }

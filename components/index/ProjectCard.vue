@@ -1,25 +1,19 @@
 <template>
     <div class="project-card">
-        <a v-on:click="testMethod">
+       <nuxt-link to="/Project">
             <div class="card-content">
                 <h2>{{name}}</h2>
                 <p>{{project}}</p>
                 <p>{{projectAddress}}</p>
                 <span class="text-link white">{{linkText}}</span>
             </div>
-        </a>
+        </nuxt-link>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['name', 'project', 'projectAddress', 'linkText', 'imgPath'],
-
-    methods: {
-        testMethod: () => {
-            console.log('%%%%%%%');
-        }
-    }
+    props: ['name', 'project', 'projectAddress', 'linkText', 'imgPath']
 }
 </script>
 

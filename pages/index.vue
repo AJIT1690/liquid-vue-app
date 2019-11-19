@@ -1,12 +1,12 @@
 <template>
   <div>
     
-    <sidebar></sidebar>
     <div class="row">
       <div class="col-md-12 col-lg-10">
         <intro-content :pageTitle="pageTitle" :leadText="leadText"></intro-content>
         <project-card :name="name" :project="project" :projectAddress="projectAddress" :linkText="linkText" ></project-card>
         <project-card :name="name2" :project="project2" :projectAddress="projectAddress2" :linkText="linkText" ></project-card>
+        <media-box></media-box>
       </div>
     </div>
   </div>  
@@ -16,12 +16,13 @@
 
 import ProjectCard from '~/components/index/ProjectCard.vue'
 import IntroContent from '~/components/index/IntroContent.vue'
-import Sidebar from '~/components/Sidebar.vue'
+import MediaBox from '~/components/index/MediaBox.vue'
+
 export default {
   components: {
     ProjectCard,
     IntroContent,
-    Sidebar
+    MediaBox
   },
 
   data: function(){
