@@ -23,8 +23,9 @@
 
 import ProjectCard from '~/components/index/ProjectCard.vue'
 import IntroContent from '~/components/index/IntroContent.vue'
-import DonutCard from '~/components/investmentGrowth/DonutCard.vue';
-import PortfolioCard from '~/components/investmentGrowth/PortfolioCard.vue';
+import DonutCard from '~/components/investmentGrowth/DonutCard.vue'
+import PortfolioCard from '~/components/investmentGrowth/PortfolioCard.vue'
+import {TestMixin} from '~/components/TestMixin.js'
 
 export default {
   components: {
@@ -44,17 +45,9 @@ export default {
       projectAddress2: 'McGrath Avenue, St Kilda'
     }
   },
-  mounted () {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-
-      setTimeout(() => this.$nuxt.$loading.finish(), 700)
-    })
-  }
-
-    
-
+  mixins: [TestMixin]
 }
+
 </script>
 
 <style scoped>

@@ -38,12 +38,12 @@ export default {
       projectAddress2: 'McGrath Avenue, St Kilda'
     }
   },
-  mounted () {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-
-      setTimeout(() => this.$nuxt.$loading.finish(), 700)
-    })
+  created () {
+    this.$nuxt.$loading.start()
+  },
+  mounted() {
+    
+    setTimeout(() => this.$nuxt.$loading.finish(), 700)
   }
 
     
