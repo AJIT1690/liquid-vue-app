@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <div class="row">
       <div class="col-md-12 col-lg-10">
         <intro-content :pageTitle="pageTitle" :leadText="leadText"></intro-content>
@@ -11,7 +10,6 @@
             </div>
             <div class="col-lg-6">
                 <DonutCard></DonutCard>
-                
             </div>
         </div>
       </div>
@@ -25,9 +23,11 @@ import ProjectCard from '~/components/index/ProjectCard.vue'
 import IntroContent from '~/components/index/IntroContent.vue'
 import DonutCard from '~/components/investmentGrowth/DonutCard.vue'
 import PortfolioCard from '~/components/investmentGrowth/PortfolioCard.vue'
-import {TestMixin} from '~/components/TestMixin.js'
+import { TestMixin } from '~/components/TestMixin.js'
 
 export default {
+  mixins: [ TestMixin ],
+
   components: {
     ProjectCard,
     IntroContent,
@@ -44,10 +44,8 @@ export default {
       project2: 'Apt No. 00',
       projectAddress2: 'McGrath Avenue, St Kilda'
     }
-  },
-  mixins: [TestMixin]
+  }
 }
-
 </script>
 
 <style scoped>
