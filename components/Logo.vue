@@ -1,8 +1,9 @@
 <template>
   <div class="header-logo">
-      <a href="#" class="logo logo-full" aria-label="Liquid Digital Agency">
+     
+      <nuxt-link to="/" class="logo logo-full">
         <img src="~/assets/svg/logo-pp.svg" alt="logo">
-      </a>
+      </nuxt-link>
   </div>
 </template>
 

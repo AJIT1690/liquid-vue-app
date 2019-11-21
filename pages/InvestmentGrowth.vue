@@ -1,36 +1,30 @@
 <template>
-    <div id="main">
-		<div id="intro-section" class="section-pt section-pb">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-11">
-						<div class="section-content">
-							<h1 class="mb50">{{head}}</h1>
-                        </div>
-                        <div class="row-wrapper">
-							<div class="row">
-								<div class="col-lg-5">
-                                    <DonutCard></DonutCard>
-								</div>
-                                <div class="col-lg-6">
-                                    <OverviewCard></OverviewCard>
-                                </div>
-							</div>
-                        </div>
-                        <div class="row-wrapper">
-							<div class="row">
-								<div class="col-lg-5">
-                                    <PortfolioCard></PortfolioCard>
-								</div>
-                                <div class="col-lg-6">
-                                    <SummaryCard></SummaryCard>
-                                </div>
-							</div>
-                        </div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="row">
+        <div class="col-lg-11">
+            <div class="section-content">
+                <h1 class="mb50">{{head}}</h1>
+            </div>
+            <div class="row-wrapper">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <DonutCard></DonutCard>
+                    </div>
+                    <div class="col-lg-6">
+                        <OverviewCard></OverviewCard>
+                    </div>
+                </div>
+            </div>
+            <div class="row-wrapper">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <PortfolioCard></PortfolioCard>
+                    </div>
+                    <div class="col-lg-6">
+                        <SummaryCard></SummaryCard>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -54,6 +48,13 @@ export default {
         return {
             head : 'My Deposit Growth'
         }
+    },
+    mounted () {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+
+        setTimeout(() => this.$nuxt.$loading.finish(), 700)
+      })
     }
 }
 </script>

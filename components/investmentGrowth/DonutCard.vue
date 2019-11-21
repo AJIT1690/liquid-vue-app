@@ -1,12 +1,12 @@
 <template>
-  <div class="grid-wrapper">
+  	<div class="grid-wrapper">
 		<div class="grid-box card">
 			<h3>{{head}}</h3>
 			<p class=" main-text">{{mainText}}</p>
-		  <div class="chart-box graph-box">
+		  	<div class="chart-box graph-box">
 				<div class="chart-image">
 					<div class="img-wrapper">
-						<!--<img src="{{imageLink}}"/> -->
+						<img src="~assets/img/donut-chart.png"  alt="chart"/>
 					</div>
 				</div>
 				<div class="chart-text">

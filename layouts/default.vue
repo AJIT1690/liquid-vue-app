@@ -1,5 +1,6 @@
 <template>
   <div>
+    <loading></loading>
     <header-main v-on:openMenu="bodyMenuClass"></header-main>
     <sidebar v-on:openSidebar="openSidebar"></sidebar>
     <div id="main">
@@ -19,13 +20,15 @@
 import HeaderMain from '~/components/HeaderMain.vue'
 import Sidebar from '~/components/Sidebar.vue'
 import FooterMain from '~/components/FooterMain.vue'
+import Loading from '~/components/Loading.vue'
 
 
 export default {
   components: {
     HeaderMain,
     Sidebar,
-    FooterMain
+    FooterMain,
+    Loading
   },
 
   methods: {

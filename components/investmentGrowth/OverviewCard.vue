@@ -4,7 +4,7 @@
 			<h3>{{head}}</h3>
       <div class="chart-box graph-box">
 			  <div class="img-wrapper">
-					<!--<img src="{{imageLink}}" /> -->
+					<img src="~assets/img/overview-chart.png"  alt="banner"/>
 			  </div>
       </div>
 		</div>
@@ -15,8 +15,8 @@
 export default {
   data : function() {
     return {
-    head : 'Your investment overview',
-    imageLink : '/assets/img/overview-chart.png'
+      head : 'Your investment overview',
+      imageLink : 'assets/img/overview-chart.png'
     }
   }
 }

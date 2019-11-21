@@ -4,6 +4,7 @@
   "description": "My perfect Nuxt.js project",
   "author": "ajit",
   "private": true,
+  "name": "example-routes-transitions",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -11,7 +12,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
+    "nuxt": "latest",
     "bootstrap": "^4.1.3",
     "slick-carousel": "^1.8.1",
     "jquery": "^3.4.1",

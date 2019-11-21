@@ -37,6 +37,13 @@ export default {
       project2: 'Apt No. 00',
       projectAddress2: 'McGrath Avenue, St Kilda'
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 700)
+    })
   }
 
     

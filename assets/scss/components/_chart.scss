@@ -20,8 +20,9 @@
 	&.graph-box {
 		align-items: center;
 		.chart-image {
+			max-width: 42%;
 			.img-wrapper {
-				width: 148px;
+				width: 100%;
 				border-radius: 50%;
 			}
 		}

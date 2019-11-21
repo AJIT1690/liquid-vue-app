@@ -6,7 +6,7 @@
 		  <div class="chart-box">
 			  <div class="chart-image">
 				  <div class="img-wrapper">
-					  <!--<img src="/assets/svg/portfolio-media.svg" alt="logo"> -->
+					  <img src="~assets/svg/portfolio-media.svg" alt="logo">
 				  </div>
 			  </div>
 			  <div class="chart-text">
