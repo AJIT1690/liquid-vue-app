@@ -6,7 +6,9 @@
     <div id="main">
       <div id="intro-section" class="section-pt section-pb">
         <div class="container">
-          <nuxt />
+          <transition name="fade">
+            <nuxt />
+          </transition>
         </div>
       </div>
     </div> 
@@ -56,5 +58,10 @@ export default {
 
 </script>
 <style>
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
